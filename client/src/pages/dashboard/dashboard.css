@@ -1,0 +1,118 @@
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left sidebar */
+.dashboard__left {
+  flex: 0 0 250px;
+  height: 100%;
+  box-shadow: 4px 0 10px;
+  transition: width 0.3s ease;
+}
+
+/* Right content area */
+.dashboard__right {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #f4f4f4;
+  overflow-y: auto;
+}
+
+/* Right content box */
+.dashboard__rightContent {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.dashboard__rightContent h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Task count section */
+.taskcount {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Task count boxes */
+.box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+/* Todo box */
+.todo {
+  background-color: #f39c12; /* Yellow background */
+  color: #fff;
+}
+
+/* Complete box */
+.done {
+  background-color: #2ecc71; /* Green background */
+  color: #fff;
+}
+
+/* Button section */
+.createButton {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Create task button */
+.createButton .button {
+  padding: 12px 25px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.createButton .button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .dashboard__left {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .dashboard__right {
+    padding: 20px;
+  }
+
+  .taskcount {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .box {
+    width: 100%;
+  }
+}

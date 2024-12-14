@@ -1,0 +1,13 @@
+{
+	"name": "Task-Tracker-Application",
+	"version": "1.0.0",
+	"scripts": {
+	  "dev": "concurrently \"pnpm run server\" \"pnpm run client\"",
+	  "server": "cd server && pnpm run dev",
+	  "client": "cd client && pnpm run dev"
+	},
+	"dependencies": {
+	  "concurrently": "^9.1.0"
+	}
+  }
+  

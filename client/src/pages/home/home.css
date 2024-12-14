@@ -1,0 +1,75 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../../assets/images/home.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+}
+
+.home__container {
+  text-align: center;
+  max-width: 500px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading style */
+.home__container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.home__container p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #f3f3f3;
+}
+
+/* Button style */
+.home__container .button {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #6a11cb;
+  background-color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+.home__container .button:hover {
+  background-color: #6a11cb;
+  color: #fff;
+  border: 2px solid #fff;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home__container {
+    padding: 30px;
+    max-width: 100%;
+  }
+
+  .home__container h2 {
+    font-size: 2rem;
+  }
+
+  .home__container p {
+    font-size: 1rem;
+  }
+
+  .home__container .button {
+    font-size: 0.9rem;
+    padding: 10px 25px;
+  }
+}

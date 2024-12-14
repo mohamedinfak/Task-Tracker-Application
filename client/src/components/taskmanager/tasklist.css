@@ -1,0 +1,46 @@
+.list-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr; /* Columns for ID, task name, status, and action */
+  gap: 38px;
+  background-color: #19acd8d2;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.list-header li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-header li h5 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Style for responsive layout */
+@media (max-width: 768px) {
+  .list-header {
+    grid-template-columns: 1fr 2fr 1.5fr 1fr;
+    padding: 8px;
+  }
+
+  .list-header li h5 {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    .list-header {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .list-header li h5 {
+      font-size: 0.9rem;
+    }
+  }
+}
