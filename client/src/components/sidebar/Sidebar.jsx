@@ -25,9 +25,11 @@ const Sidebar = () => {
           <h5
             style={{
               color: "white",
-              fontSize: "25px",
+              fontSize: "18px",
               textAlign: "center",
-              marginBottom: "20px",
+              marginBottom: "25px",
+              backgroundColor: "#0e98ec",
+              borderRadius: "5px",
             }}
           >
             User: {currentUser.username.toUpperCase()}
@@ -43,13 +45,13 @@ const Sidebar = () => {
           <NavLink
             to="/dashboard"
             style={({ isActive }) => ({
-              color: "white",
+              color: isActive ? "white" : "black",
               textDecoration: "none",
               padding: "10px",
               display: "block",
               fontWeight: isActive ? "bold" : "normal",
               fontSize: "20px",
-              backgroundColor: isActive ? "#2ecc71" : "transparent", // Active link background color
+              backgroundColor: isActive ? "#2ecc71" : "yellow", // Active link background color
               borderRadius: "5px",
             })}
             end
