@@ -6,4 +6,4 @@
 
 #### go to each individial folder server,client and pnpm run dev
 
-#### go back to root folder and pnpm install run pnpm start
+#### go back to root folder and pnpm install and pnpm run dev
