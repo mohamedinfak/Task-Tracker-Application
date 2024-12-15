@@ -38,6 +38,9 @@ importers:
       react-toastify:
         specifier: ^8.1.0
         version: 8.2.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      reselect:
+        specifier: ^5.1.1
+        version: 5.1.1
       sass:
         specifier: ^1.63.6
         version: 1.83.0
@@ -1365,6 +1368,9 @@ packages:
 
   reselect@4.1.8:
     resolution: {integrity: sha512-ab9EmR80F/zQTMNeneUr4cv+jSwPJgIlvEmVwLerwrWVbpLlBuls9XHzIeTFy4cegU2NHBp3va0LKOzU5qFEYQ==}
+
+  reselect@5.1.1:
+    resolution: {integrity: sha512-K/BG6eIky/SBpzfHZv/dd+9JBFiS4SWV7FIujVyJRux6e45+73RaUHXLmIR1f7WOMaQ0U1km6qwklRQxpJJY0w==}
 
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -3010,6 +3016,8 @@ snapshots:
       set-function-name: 2.0.2
 
   reselect@4.1.8: {}
+
+  reselect@5.1.1: {}
 
   resolve-from@4.0.0: {}
 
