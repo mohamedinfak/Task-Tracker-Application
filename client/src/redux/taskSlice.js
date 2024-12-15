@@ -97,7 +97,7 @@ export const getAllTasks = (token, id) => async (dispatch) => {
 export const editTask = (id, updatedData) => async (dispatch) => {
   try {
     const response = await axios.put(
-      `http://localhost:4000/task/${id}`,
+      `http://localhost:4000/task/edit/${id}`,
       updatedData
     );
     if (response) {
@@ -111,7 +111,7 @@ export const editTask = (id, updatedData) => async (dispatch) => {
 };
 
 export const arrowClick = (item, string) => async () => {
-  const taskData = { id: item._id, status: item.status, string };
+  let taskData = { id: item._id, status: item.status, string };
   try {
     const response = await axios.put(
       `http://localhost:4000/task/${taskData.id}`,

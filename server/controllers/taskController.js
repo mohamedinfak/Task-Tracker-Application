@@ -28,37 +28,6 @@ const getAllTasks = async (req, res) => {
 	}
 };
 
-const editTask = async (req, res) => {
-	const { id } = req.params; // Task ID from the URL parameter
-	const { task } = req.body; // Updated task details from the request body
-  
-	try {
-	  if (!id) {
-		return res.status(400).send("Task ID is required");
-	  }
-  
-	  if (!task || task.trim().length < 10) {
-		return res.status(400).send("Task must be at least 10 characters long");
-	  }
-  
-	  const updatedTask = await Task.findByIdAndUpdate(
-		id,
-		{ task },
-		{ new: true } // Return the updated document
-	  );
-  
-	  if (!updatedTask) {
-		return res.status(404).send("Task not found");
-	  }
-  
-	  return res.status(200).json(updatedTask);
-	} catch (error) {
-	  console.error("Error editing task:", error);
-	  return res.status(500).send("Failed to edit task");
-	}
-  };
-  
-
 const statusChange = async (req, res) => {
 	const { id, string } = req.body;
 
@@ -95,6 +64,40 @@ const statusChange = async (req, res) => {
 		}
 	} catch (error) {}
 };
+
+const editTask = async (req, res) => {
+	const { id } = req.params; // Task ID from the URL parameter
+	const { task } = req.body; // Updated task details from the request body
+  
+	try {
+	  if (!id) {
+		return res.status(400).send("Task ID is required");
+	  }
+  
+	  if (!task || task.trim().length < 10) {
+		return res.status(400).send("Task must be at least 10 characters long");
+	  }
+  
+	  const updatedTask = await Task.findByIdAndUpdate(
+		id,
+		{ task },
+		{ new: true } // Return the updated document
+	  );
+  
+	  if (!updatedTask) {
+		return res.status(404).send("Task not found");
+	  }
+  
+	  return res.status(200).json(updatedTask);
+	} catch (error) {
+	  console.error("Error editing task:", error);
+	  return res.status(500).send("Failed to edit task");
+	}
+  };
+  
+
+  
+
 
 const deleteTask = async (req, res) => {
 	const { id } = req.params;
